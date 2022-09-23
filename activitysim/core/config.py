@@ -10,7 +10,7 @@ import warnings
 
 import yaml
 
-from activitysim.core import inject
+from activitysim.core import inject, simulate
 
 logger = logging.getLogger(__name__)
 
@@ -652,3 +652,25 @@ def handle_standard_args(parser=None):
     run.add_run_args(parser)
     args = parser.parse_args()
     run.handle_standard_args(args)
+    
+def check_spec():
+    for model in setting('models', []):
+        try:
+            model_settings = read_model_settings(model + ".yaml") #May not work 100%
+
+        except FileNotFoundError:
+            continue
+
+        #try:
+        spec = simulate.read_spec_file(model_settings.get('SPEC'))
+        coef = simulate.read_model_coefficients(model_settings)
+
+        #except KeyError:
+        #    continue
+
+        for val in np.reshape(spec.values[:, 3:], spec.shape[0] * (spec.shape[1]-3)):
+            try:
+                float(val)
+                continue
+            except ValueError:
+                assert np.vectorize(lambda x: val.split(' ')[-1] in x)(coef.index).any(), '{0} not defined in {1}'.format(str(val), model_settings.get('Coefficients'))

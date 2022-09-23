@@ -190,6 +190,8 @@ def run(args):
     tracing.config_logger(basic=True)
     handle_standard_args(args)  # possibly update injectables
 
+    config.check_spec() # check specification files
+
     # legacy support for run_list setting nested 'models' and 'resume_after' settings
     if config.setting("run_list"):
         warnings.warn(
