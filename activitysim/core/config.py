@@ -663,7 +663,8 @@ def check_spec():
             continue
 
         spec_file = model_settings.get('SPEC')
-        if spec_file is None:
+        coef_file = model_settings.get('COEFFICIENTS')
+        if spec_file is None or coef_file is None:
             continue
 
         spec = simulate.read_model_spec(spec_file)
