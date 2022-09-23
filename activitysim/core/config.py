@@ -675,4 +675,4 @@ def check_spec():
                 float(val)
                 continue
             except ValueError:
-                assert np.vectorize(lambda x: val.split(' ')[-1] in x)(coef.index).any(), '{0} not defined in {1}'.format(str(val), model_settings.get('Coefficients'))
+                assert np.vectorize(lambda x: val.split(' ')[-1] in x)(coef.index).any(), '{0} not defined in {1}'.format(str(val), coef_file)
