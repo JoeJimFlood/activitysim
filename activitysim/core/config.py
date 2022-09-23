@@ -7,6 +7,7 @@ import os
 import struct
 import time
 import warnings
+import numpy as np
 
 import yaml
 
