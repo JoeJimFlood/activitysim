@@ -662,7 +662,7 @@ def check_spec():
             continue
 
         #try:
-        spec = simulate.read_spec_file(model_settings.get('SPEC'))
+        spec = simulate.read_model_spec(model_settings.get('SPEC'))
         coef = simulate.read_model_coefficients(model_settings)
 
         #except KeyError:
