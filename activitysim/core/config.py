@@ -661,12 +661,12 @@ def check_spec():
         except FileNotFoundError:
             continue
 
-        #try:
-        spec = simulate.read_model_spec(model_settings.get('SPEC'))
-        coef = simulate.read_model_coefficients(model_settings)
+        spec_file = model_settings.get('SPEC')
+        if spec_file is None:
+            continue
 
-        #except KeyError:
-        #    continue
+        spec = simulate.read_model_spec(spec_file)
+        coef = simulate.read_model_coefficients(model_settings)
 
         for val in np.reshape(spec.values[:, 3:], spec.shape[0] * (spec.shape[1]-3)):
             try:
