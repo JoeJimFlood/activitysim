@@ -49,4 +49,5 @@ University student interaction with off-peak accessibility to retail,(ptype == 3
 Driving-age child who is in school interaction with off-peak accessibility to retail,(ptype == 6) * auOpRetail,,coef_child_who_is_in_school_or_too_young_for_school_interaction_with_off_peak_accessibility_to_retail_N,
 Pre-driving-age child who is in school interaction with off-peak accessibility to retail,(ptype == 7) * auOpRetail,,coef_child_who_is_in_school_or_too_young_for_school_interaction_with_off_peak_accessibility_to_retail_N,
 Pre-driving-age child who is too young for school interaction with off-peak accessibility to retail,(ptype == 8) * auOpRetail,,coef_child_who_is_in_school_or_too_young_for_school_interaction_with_off_peak_accessibility_to_retail_N,
-
+#,,,,
+Person plays Pokemon so they are less likely to stay at home all day,plays_pokemon == True,,,coef_plays_pokemon

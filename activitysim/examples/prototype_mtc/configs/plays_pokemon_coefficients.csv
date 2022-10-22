@@ -1,0 +1,9 @@
+coefficient_name,value,constrain
+coef_doesnt_play,-999,F
+coef_age_5_7,0.693147181,F
+coef_age_8_11,1.098612289,F
+coef_age_12_14,0,F
+coef_age_15_17,-0.693147181,F
+coef_age_18_24,-1.386294361,F
+coef_age_25_34,-1.609437912,F
+coef_age_35_44,-1.791759469,F

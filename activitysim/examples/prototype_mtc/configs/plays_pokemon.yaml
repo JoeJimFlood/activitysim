@@ -1,0 +1,8 @@
+
+SPEC: plays_pokemon.csv
+COEFFICIENTS: plays_pokemon_coefficients.csv
+
+#LOGIT_TYPE: NL
+LOGIT_TYPE: MNL
+
+PLAYS_POKEMON_ALT: 0

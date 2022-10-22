@@ -1,0 +1,10 @@
+Label,Description,Expression,play,not
+util_age_0_4,Age under 5,@df.age < 5,coef_doesnt_play,0
+util_age_5_7,Age from 5-7,@(df.age >= 5) & (df.age < 8),coef_age_5_7,0
+util_age_8_11,Age from 8-11,@(df.age >= 8) & (df.age < 12),coef_age_8_11,0
+util_age_12_14,Age from 12-14,@(df.age >= 12) & (df.age < 14),coef_age_12_14,0
+util_age_15_17,Age from 15-17,@(df.age >= 15) & (df.age < 18),coef_age_15_17,0
+util_age_18_24,Age from 18-24,@(df.age >= 18) & (df.age < 25),coef_age_18_24,0
+util_age_25_34,Age from 25-34,@(df.age >= 25) & (df.age < 35),coef_age_25_34,0
+util_age_35_44,Age from 35-44,@(df.age >= 35) & (df.age < 45),coef_age_35_44,0
+util_age_over_45,Age over 45,@df.age >= 45,coef_doesnt_play,0
