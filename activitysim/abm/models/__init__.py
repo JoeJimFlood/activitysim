@@ -24,6 +24,7 @@ from . import (
     non_mandatory_scheduling,
     non_mandatory_tour_frequency,
     parking_location_choice,
+    plays_pokemon,
     stop_frequency,
     summarize,
     tour_mode_choice,
