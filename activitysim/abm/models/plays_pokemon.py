@@ -23,7 +23,9 @@ def plays_pokemon(persons_merged, persons, chunk_size):
 
     model_spec = simulate.read_model_spec(file_name=model_settings["SPEC"])
     coefficients_df = simulate.read_model_coefficients(model_settings)
-    model_spec = simulate.eval_coefficients(model_spec, coefficients_df, estimator)
+    model_spec = simulate.eval_coefficients(model_spec, coefficients_df, False)
+
+    nest_spec = config.get_logit_model_settings(model_settings)
 
     choices = simulate.simple_simulate(
         choosers=choosers,
@@ -33,7 +35,7 @@ def plays_pokemon(persons_merged, persons, chunk_size):
         chunk_size=chunk_size,
         trace_label=trace_label,
         trace_choice_name="person_plays_pokemon",
-        estimator=estimator,
+        estimator=False,
     )
 
     plays_pokemon_alt = model_settings["PLAYS_POKEMON_ALT"]
