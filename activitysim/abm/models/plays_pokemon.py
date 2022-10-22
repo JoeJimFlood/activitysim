@@ -13,7 +13,7 @@ def plays_pokemon(persons_merged, persons, chunk_size):
     """ """
 
     trace_label = "plays_pokemon"
-    model_settings_file_name = "plays_pokemon"
+    model_settings_file_name = "plays_pokemon.yaml"
 
     choosers = persons_merged.to_frame()
     logger.info("Running %s with %d persons", trace_label, len(choosers))
